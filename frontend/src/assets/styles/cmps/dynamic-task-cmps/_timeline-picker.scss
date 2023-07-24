@@ -1,0 +1,219 @@
+.timeline-picker {
+	h2 {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.reset-date-btn {
+		position: absolute;
+		right: 0px;
+		top: 4px;
+		background-color: $button-hover-bgc;
+		border-radius: 4px;
+		color: $clr1;
+		width: 15px;
+	}
+
+	.timeline-popup-container {
+		z-index: 1200;
+	}
+
+	.timeline-container {
+		max-width: 100%;
+	}
+
+	.span-container {
+		height: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+
+		.progress {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.range-preview {
+		color: $clr0;
+		min-width: rem(107px);
+		text-align: center;
+		position: relative;
+
+		.span-container {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		span {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: rem(12px);
+			font-weight: 400;
+		}
+	}
+
+	.reset-date-btn {
+		position: absolute;
+		right: 0px;
+		top: 4px;
+		background-color: $button-hover-bgc;
+		border-radius: 4px;
+		color: $clr1;
+		width: 15px;
+	}
+
+	.rdp-multiple_months {
+		margin: 0;
+	}
+
+	.rdp-months {
+		border: 1px solid $clr2;
+		border-radius: 4px;
+		-webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		-moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		background-color: $clr0;
+		font-family: Figtree;
+		font-size: 16px;
+		font-weight: 300;
+		padding: 1em;
+	}
+
+	.range-preview {
+		font-size: rem(12px);
+		border-radius: 5em;
+		padding-inline: 1em;
+		color: $clr0;
+		min-width: rem(107px);
+		text-align: center;
+	}
+}
+
+.rdp-day_selected {
+	background-color: $bg-clr1;
+	color: $clr1;
+
+	&:not(.rdp-day_range_end):hover {
+		background-color: $button-hover-bgc;
+		color: $clr1;
+	}
+}
+
+Today .rdp-day_today {
+	border: 1px solid $bg-clr1;
+	border-radius: 50%;
+	color: $clr0;
+	background-color: $bg-clr1;
+	font-weight: 300;
+
+	&:hover {
+		background-color: $bg-clr1;
+		color: $clr0;
+	}
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+	background-color: $clr0;
+	color: $clr1;
+	font-weight: 300;
+}
+
+// Selected end date text-clr
+.rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+	color: $clr0;
+}
+
+.rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+	background-color: $bg-clr1;
+}
+
+.rdp-day_selected {
+	.rdp-day_selected:focus-visible {
+		.rdp-day_selected:hover {
+			background-color: $bg-clr1;
+		}
+	}
+}
+
+// Month label (title)
+.rdp-caption_label {
+	font-weight: 400;
+}
+
+// Days label
+.rdp-head_cell {
+	color: $icon-color;
+	font-weight: 300;
+	cursor: default;
+	font-size: 12px;
+}
+
+.previous-month {
+	width: 24px;
+	height: 24px;
+
+	&:hover {
+		background-color: none;
+	}
+}
+
+// Start day
+.rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+	color: $clr0;
+	font-weight: 300;
+
+	&:hover {
+		background-color: $bg-clr1;
+	}
+}
+
+// Middle days (range)
+.rdp-day_range_middle {
+	background-color: $button-clicked-bgc;
+	color: $clr1;
+}
+
+// End day
+.rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+	color: $clr0;
+	font-weight: 300;
+
+	&:hover {
+		background-color: $bg-clr1;
+	}
+}
+
+.nav-buttons-container {
+	h2 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+}
+
+.rdp-months:first-child {
+	.rdp-caption_start {
+		.nav-buttons-container {
+			span:nth-child(3) {
+				visibility: hidden;
+			}
+
+			padding-inline-end: 10px;
+		}
+	}
+
+	.rdp-caption_end {
+		.nav-buttons-container {
+			span:nth-child(1) {
+				visibility: hidden;
+			}
+		}
+	}
+}

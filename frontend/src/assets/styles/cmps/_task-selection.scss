@@ -1,0 +1,60 @@
+.task-selection {
+	min-width: $task-row-height;
+	height: 100%;
+	width: $task-row-height;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-inline-end: 1px solid $border-clr;
+
+	.checkbox {
+		width: 16px;
+		height: 16px;
+		border: 1px solid $input-hover-border-clr;
+		border-radius: 2px;
+		position: relative;
+
+		&:hover:not(.disabled) {
+			border-color: $icon-color;
+			cursor: pointer;
+		}
+
+		&.checked {
+			border: none;
+			background-color: $bg-clr1;
+		}
+		&.disabled {
+			& > * {
+				cursor: text;
+			}
+			border-color: lighten($input-hover-border-clr, 10);
+		}
+	}
+
+	.task-selection-label {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		z-index: 999;
+		cursor: pointer;
+	}
+
+	.checked-icon {
+		position: absolute;
+		display: flex;
+		top: 1px;
+		left: 1px;
+		color: $clr0;
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	input {
+		display: none;
+	}
+}

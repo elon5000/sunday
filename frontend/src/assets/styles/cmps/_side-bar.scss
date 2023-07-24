@@ -1,0 +1,138 @@
+.side-bar {
+	display: none;
+
+	@media (min-width: $mobile-breakpoint) {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		height: 100vh;
+		color: $clr0;
+		background-color: $bg-clr2;
+		width: 66px;
+		min-width: 66px;
+		z-index: 6000;
+	}
+
+	.nav-container {
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		.top-navigation-area {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.active {
+				width: 12px;
+				height: 12px;
+				background-color: $bg-clr3;
+				rotate: 45deg;
+				position: absolute;
+				right: -7px;
+			}
+
+			ul {
+				li:first-child:not(.work-management) {
+					img {
+						height: 2.5em;
+						width: 2.5em;
+					}
+
+					margin-block-start: 0.5em;
+				}
+
+				li:nth-child(2) {
+					svg {
+						height: 1.7em;
+						width: 1.7em;
+					}
+				}
+			}
+
+			li {
+				cursor: pointer;
+				width: 2.5em;
+				height: 2.5em;
+				align-items: center;
+				justify-content: center;
+
+				svg {
+					width: 1.5em;
+					height: 1.5em;
+				}
+
+				&:first-child {
+					padding: 0;
+
+					&:hover {
+						padding: 0;
+					}
+				}
+
+				&:hover {
+					background-color: $bg-clr4;
+					border-radius: 0.4em;
+				}
+			}
+		}
+
+		.bottom-navigation-area {
+			.profile {
+				width: 44px;
+				height: 44px;
+			}
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			ul {
+				gap: 1em;
+			}
+
+			li {
+				&.apps {
+					color: $clr11;
+					width: 42px;
+					height: 42px;
+					padding: 6px;
+					margin-block-end: 8px;
+				}
+
+				cursor: pointer;
+				width: 2em;
+				text-align: center;
+				height: 2em;
+				align-items: center;
+				justify-content: center;
+
+				&:hover {
+					background-color: $bg-clr4;
+					border-radius: 0.4em;
+				}
+
+				&:last-child img {
+					border: 2px solid $clr0;
+
+					border-radius: 50%;
+				}
+
+				&:last-child {
+					margin-block-end: 1em;
+
+					&:hover {
+						background-color: inherit;
+					}
+				}
+			}
+		}
+
+		hr {
+			width: rem(40px);
+			border-color: $clr6;
+			border-block-start: none;
+		}
+	}
+}

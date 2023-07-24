@@ -1,0 +1,104 @@
+.date-picker {
+	cursor: text;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	&:hover {
+		.date-container {
+			border: 1px solid $clr4;
+		}
+		.reset-date-btn {
+			opacity: 1;
+		}
+		.add-date-btn {
+			opacity: 1;
+		}
+	}
+
+	.date-container {
+		display: flex;
+		justify-content: center;
+		&.has-date {
+			justify-content: space-between;
+		}
+
+		width: 90%;
+		height: 80%;
+
+		.start-margin {
+			width: 30px;
+		}
+	}
+
+	.date-preview-container {
+		position: relative;
+		overflow: hidden;
+
+		.date-preview {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 13px;
+			color: $clr6;
+		}
+
+		span:hover {
+			color: $link-color;
+		}
+	}
+	.span-container {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.reset-date-btn {
+		opacity: 0;
+		margin-inline-end: 5px;
+		background-color: $button-hover-bgc;
+		border-radius: 4px;
+		color: $clr1;
+		width: 15px;
+		align-self: center;
+	}
+
+	.add-date-btn {
+		opacity: 0;
+		gap: 0.2em;
+	}
+
+	.rdp {
+		margin: 0;
+	}
+
+	.rdp-day_today:not(.rdp-day_outside) {
+		border: 1px solid $bg-clr1;
+		border-radius: 50%;
+		font-weight: 300;
+	}
+
+	.rdp-tbody {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.rdp-months {
+		padding: 1em;
+		border-radius: 4px;
+		border: 1px solid $clr2;
+		-webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		-moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.31);
+		background-color: $clr0;
+	}
+
+	.date-picker-container {
+		z-index: 120;
+	}
+
+	li.date-picker:hover {
+		cursor: text;
+	}
+}

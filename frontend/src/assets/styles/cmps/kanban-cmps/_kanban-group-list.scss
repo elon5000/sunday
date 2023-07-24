@@ -1,0 +1,11 @@
+.kanban-group-list {
+	padding-inline: 38px;
+	display: flex;
+	gap: 20px;
+	overflow-y: hidden;
+	height: 100%;
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 16px;
+	}
+}

@@ -1,0 +1,132 @@
+.activity-preview {
+	padding-block: 0.7em;
+	border-block-end: 1px solid #c4cad9;
+	justify-content: space-around;
+	display: grid;
+	grid-template-columns: rem(40px) rem(145px) rem(190px);
+	grid-template-rows: 1fr;
+	grid-gap: 1.1em;
+	width: 100%;
+
+	@media (min-width: $mobile-breakpoint) {
+		height: rem(56px);
+		width: rem(600px);
+		grid-template-columns: rem(102px) rem(240px) rem(200px);
+	}
+
+	.user-action-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		min-height: min-content;
+		width: fit-content;
+		gap: 1em;
+
+		.timesince {
+			gap: 3px;
+			align-items: flex-start;
+		}
+
+		@media (min-width: $mobile-breakpoint) {
+			gap: 0;
+			flex-direction: row;
+			justify-content: space-between;
+			width: rem(102px);
+		}
+	}
+
+	.action-and-type-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin-inline-end: 1em;
+
+		span:nth-child(2) {
+			min-width: max-content;
+		}
+
+		@media (min-width: $mobile-breakpoint) {
+			gap: 0;
+			flex-direction: row;
+			justify-content: space-between;
+
+			span {
+				max-width: 100px;
+			}
+
+			span:nth-child(2) {
+				min-width: 80px;
+			}
+		}
+
+		.action-type {
+			justify-content: flex-start;
+		}
+	}
+
+	.user-img {
+		min-width: 30px;
+		min-height: 30px;
+		flex: 0;
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+	}
+
+	> * span {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.action-type {
+		width: rem(102.4px);
+
+		.type-icon {
+			width: 14px;
+			height: 14px;
+		}
+
+		span {
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+
+	.dynamic-cmp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.timeline-container {
+			width: 100%;
+
+			.span-container {
+				width: 100%;
+			}
+		}
+
+		.old-label,
+		.new-label {
+			color: $clr0;
+			height: rem(39px);
+			max-width: rem(85px);
+			width: rem(85px);
+			padding: 8px;
+			border-radius: 4px;
+		}
+
+		.arrow {
+			transform: rotate(180deg);
+			width: fit-content;
+
+			svg {
+				color: $clr9;
+				min-height: 12px;
+				min-width: 12px;
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+@mixin for-mobile-layout {
+	@media (max-width: calc($mobile-breakpoint)) {
+		@content;
+	}
+}
+
+@mixin for-narrow-layout {
+	@media (min-width: calc($mobile-breakpoint + 40px)) {
+		@content;
+	}
+}
+
+@mixin for-normal-layout {
+	@media (min-width: calc($narrow-breakpoint + 40px)) {
+		@content;
+	}
+}
+
+@mixin for-wide-layout {
+	@media (min-width: calc($normal-breakpoint + 40px)) {
+		@content;
+	}
+}
+
+@mixin for-extra-wide-layout {
+	@media (min-width: calc($extra-wide-breakpoint + 40px)) {
+		@content;
+	}
+}
+
+@mixin for-extra2-wide-layout {
+	@media (min-width: calc($extra2-wide-breakpoint + 40px)) {
+		@content;
+	}
+}
+
+@mixin btn-get-started() {
+	display: inline-block;
+	border-radius: rem(40px);
+	border: none;
+	padding: rem(16px) rem(20px) rem(16px) rem(31px);
+	line-height: 1.25;
+	font-size: rem(16px);
+	color: $clr0;
+	background-color: #6161ff;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	transition: background-color 0.3s;
+	transition: padding 0.4s;
+
+	&:hover {
+		background-color: #5151d5;
+	}
+}
+
+@mixin btn-board-default($fontSize: 1em, $padding: 0px) {
+	min-width: max-content;
+	color: $clr0;
+	background-color: $bg-clr1;
+	cursor: pointer;
+	border: none;
+	padding: $padding;
+
+	&:hover {
+		background-color: $bg-clr1-darker;
+	}
+}

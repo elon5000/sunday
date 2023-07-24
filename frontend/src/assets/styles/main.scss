@@ -1,0 +1,78 @@
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
+
+// Basics
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/base';
+@import 'basics/forms';
+@import 'basics/popper-arrow';
+@import 'basics/tippy';
+@import 'basics/board-navbar';
+
+// Pages
+@import 'pages/board-details';
+@import 'pages/home-page';
+@import 'pages/board-index';
+@import 'pages/kanban';
+@import 'pages/login-signup';
+@import 'pages/user-details';
+@import 'pages/page-not-found';
+
+// Components
+@import 'cmps/workspace-board-list';
+@import 'cmps/group-preview';
+@import 'cmps/user-card-loader';
+@import 'cmps/user-msg';
+@import 'cmps/img-uploader';
+// Sidebar cmps
+@import 'cmps/side-bar';
+@import 'cmps/expandable-sidebar';
+@import 'cmps/task-details';
+
+// Activity cmps
+@import 'cmps/activity-log-cmps/activity-details';
+@import 'cmps/activity-log-cmps/activity-preview';
+@import 'cmps/activity-log-cmps/activity-filter';
+
+// Group summary cmps
+@import 'cmps/group-summary-cmps/group-summary';
+@import 'cmps/group-summary-cmps/labels-progress-bar';
+@import 'cmps/group-summary-cmps/member-summary';
+
+// Board cmps
+@import 'cmps/board-container';
+@import 'cmps/task-preview';
+@import 'cmps/task-list-header';
+@import 'cmps/add-task';
+@import 'cmps/board-header';
+@import 'cmps/board-loader';
+@import 'cmps/board-filter';
+@import 'cmps/group-list';
+@import 'cmps/task-selection';
+@import 'cmps/task-list';
+@import 'cmps/board-toolbar';
+@import 'cmps/checked-tasks-menu';
+@import 'cmps/board-info';
+@import 'cmps/task-options-menu';
+
+// Kanban cmps
+@import 'cmps/kanban-cmps/_kanban-group-preview';
+@import 'cmps/kanban-cmps/kanban-group-list';
+@import 'cmps/kanban-cmps/kanban-task-preview';
+
+// Board index cmps
+@import 'cmps/board-index-header';
+@import 'cmps/boards-list';
+@import 'cmps/board-preview';
+@import 'cmps/ai-loader';
+
+// Dynamic Task Components
+@import 'cmps/dynamic-task-cmps/label-picker';
+@import 'cmps/dynamic-task-cmps/timeline-picker';
+@import 'cmps/dynamic-task-cmps/date-picker';
+@import 'cmps/dynamic-task-cmps/member-picker';
+@import 'cmps/dynamic-task-cmps/task-title';
